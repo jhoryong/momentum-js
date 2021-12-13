@@ -1,0 +1,158 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Neue Haas Grotesk Text Pro',
+    'Helvetica Neue', Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.font-white {
+  color: white;
+}
+
+body {
+  background-size: cover;
+}
+
+.weather {
+  /* border:1px solid white; */
+  margin-top: 15px;
+  margin-right: 15px;
+  font-size: 1.5rem;
+  text-align: right;
+}
+
+#weather-description {
+  margin-right: 2px;
+}
+
+#weather-location {
+  font-size: 1rem;
+  display: block;
+  /* border:1px red solid; */
+}
+
+#clock {
+  margin-top: 50px;
+  text-align: center;
+  /* border:1px solid white; */
+  font-size: 6rem;
+  font-weight: 200;
+}
+#clock:hover {
+  cursor:pointer;
+}
+
+#login-form {
+  margin-top: 30px;
+  text-align: center;
+  /* border:1px solid white; */
+}
+
+#login-form input {
+  width: 400px;
+  height: 4rem;
+  background-color: transparent;
+  border: 0px;
+  border-bottom: 2px solid rgba(255, 255, 255, 1);
+  font-size: 3rem;
+  text-align: center;
+}
+#login-form input:focus {
+  outline: none;
+}
+#login-form input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 3rem;
+  margin: auto;
+  text-align: center;
+}
+#greeting {
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 3rem;
+  text-align: center;
+}
+
+#todo-form {
+  margin-top: 50px;
+  text-align: center;
+}
+#todo-form input {
+  color: white;
+  width: 400px;
+  height: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 0px;
+  border-bottom: 2px solid white;
+  font-size: 2rem;
+  text-align: center;
+}
+#todo-form input:focus {
+  outline: none;
+}
+#todo-form input::placeholder {
+  color: white;
+  font-size: 2rem;
+  margin: auto;
+  text-align: center;
+}
+
+#todo-list {
+  margin-top: 25px;
+  text-align: center;
+}
+.fade-in {
+  opacity: 0;
+  animation: 0.5s  fade-in forwards;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#todo-list li span {
+  color: white;
+  font-size: 2rem;
+  margin-right: 10px;
+}
+#todo-list li button {
+  font-size: 1.5rem;
+  color: white;
+  background-color: transparent;
+  border: none;
+  vertical-align: 2px;
+}
+#todo-list li button:hover {
+  cursor: pointer;
+}
+.fade-out {
+  animation: 0.5s  fade-out forwards;
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+#quote {
+  width: 100%;
+  /* border: 2px solid white; */
+  position: absolute;
+  bottom: 5%;
+  text-align: center;
+}
+#quote-phrase {
+  margin-bottom: 5px;
+}
