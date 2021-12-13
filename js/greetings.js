@@ -28,7 +28,7 @@ function paintGreetings(username){
     else if (hours >= 12 && hours < 6) greetings = "좋은 오후입니다, "
     else if (hours >= 6 && hours < 24) greetings = "좋은 저녁입니다, "
     else greetings = "좋은 새벽입니다, "
-    console.log(hours)
+
     greeting.textContent = greetings + username + '님.';
     greeting.classList.remove(HIDDEN_CLASSNAME)
     greeting.classList.add(FADEIN_CLASSNAME)

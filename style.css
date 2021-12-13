@@ -15,7 +15,16 @@
 }
 
 body {
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+  /* Background image doesn’t tile */
+  background-repeat: no-repeat;
+  /* This is what makes the background image rescale based
+on the container’s size */
   background-size: cover;
+  /* Background image is fixed in the viewport so that it doesn’t move when
+the content’s height is greater than the image’s height */
+  background-attachment: fixed;
 }
 
 .weather {
@@ -119,6 +128,9 @@ body {
   }
 }
 
+/* #todo-list li {
+  transition: all .5s 
+} */
 #todo-list li span {
   color: white;
   font-size: 2rem;
@@ -145,6 +157,7 @@ body {
     opacity: 0;
   }
 }
+
 
 #quote {
   width: 100%;

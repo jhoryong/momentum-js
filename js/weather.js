@@ -5,7 +5,7 @@ const el_temp = document.querySelector('#weather-temp');
 let a = 0;
 
 function onGeoOk(position) {
-    // if (!a) return;
+  // if (!a) return;
   // console.log(position);
   const lat = position.coords.latitude;
   const lon = position.coords.longitude;
@@ -17,12 +17,16 @@ function onGeoOk(position) {
       const location = data.name;
       const description = data.weather[0].description;
       const temp = Math.floor(data.main.temp);
-      el_location.textContent = location;
-      el_description.textContent = description;
-      el_temp.textContent = temp + '°';
-      el_location.classList.add('fade-in')
-      el_description.classList.add('fade-in')
-      el_temp.classList.add('fade-in')
+      el_location.classList.add('fade-out');
+      setTimeout(() => {
+        el_location.textContent = location;
+        el_description.textContent = description;
+        el_temp.textContent = temp + '°';
+        el_location.classList.remove('fade-out');
+        el_location.classList.add('fade-in');
+        el_description.classList.add('fade-in');
+        el_temp.classList.add('fade-in');
+      }, 500);
     });
 }
 

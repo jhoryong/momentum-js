@@ -11,10 +11,10 @@ function saveToDos() {
 }
 
 function deleteToDo(event) {
+    // event.preventDefault();
     const li = event.target.parentNode;
-    // li.style.opacity = '0'
     li.classList.add("fade-out")
-    console.log(li.classList)
+    // setTimeout(() => li.classList.add("slide-up"), 500)
     setTimeout(() => li.remove(), 500)
     toDos = toDos.filter(toDo => toDo.id !== Number(li.id))
     saveToDos();

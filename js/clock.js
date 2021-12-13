@@ -17,11 +17,14 @@ function getTime() {
 //   const minutes = String(date.getMinutes()).padStart(2, '0');
 //   const seconds = String(date.getSeconds()).padStart(2, '0');
   clock.textContent = dateStr;
+  clock.classList.remove('fade-out');
+  clock.classList.add('fade-in')
 }
 
 function changeTimeFormat(event) {
   event.preventDefault();
   isHour12 = isHour12 ? false : true;
+  clock.classList.add('fade-out');
 }
 
 getTime();
